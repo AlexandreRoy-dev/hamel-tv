@@ -53,11 +53,12 @@ export function SiteHeader() {
             href={`tel:${PHONE_TEL}`}
             className={cn(
               buttonVariants({ variant: "default" }),
-              "hidden h-10 px-4 sm:inline-flex"
+              "h-10 px-3 sm:px-4"
             )}
           >
             <Phone className="size-4" />
-            {PHONE_DISPLAY}
+            <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
+            <span className="sm:hidden">{t.nav.call}</span>
           </a>
 
           <Sheet open={open} onOpenChange={setOpen}>

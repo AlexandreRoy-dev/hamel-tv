@@ -65,24 +65,41 @@ export function HomePage() {
             <p className="mt-6 max-w-lg text-base leading-relaxed text-paper/78 sm:text-lg">
               {t.hero.lede}
             </p>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="mt-7 inline-flex items-center gap-3 text-paper transition-colors hover:text-brass"
+            >
+              <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-brass text-navy">
+                <Phone className="size-6" aria-hidden="true" />
+              </span>
+              <span className="flex flex-col leading-none">
+                <span className="text-xs font-semibold tracking-[0.18em] text-brass uppercase">
+                  {t.hero.callLabel}
+                </span>
+                <span className="mt-1.5 font-heading text-3xl tracking-tight sm:text-4xl">
+                  {PHONE_DISPLAY}
+                </span>
+              </span>
+            </a>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="#contact"
+                href={`tel:${PHONE_TEL}`}
                 className={cn(
                   buttonVariants({ variant: "default" }),
                   "h-12 bg-brass px-5 text-base text-navy hover:bg-brass/90"
                 )}
               >
-                {t.hero.ctaPrimary}
+                <Phone className="size-4" />
+                {PHONE_DISPLAY}
               </a>
               <a
-                href="#services"
+                href="#contact"
                 className={cn(
                   buttonVariants({ variant: "outline" }),
                   "h-12 border-paper/25 bg-transparent px-5 text-base text-paper hover:bg-paper/10 hover:text-paper"
                 )}
               >
-                {t.hero.ctaSecondary}
+                {t.hero.ctaPrimary}
               </a>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-paper/75">
