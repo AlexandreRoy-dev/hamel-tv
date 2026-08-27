@@ -19,7 +19,6 @@ import { cn } from "@/lib/utils"
 const NAV_LINKS = [
   { href: "/#services", key: "services" },
   { href: "/#a-propos", key: "about" },
-  { href: "/a-propos-de-daisy/", key: "daisy" },
   { href: "/#avis", key: "reviews" },
   { href: "/#contact", key: "contact" },
 ] as const
@@ -39,12 +38,12 @@ export function SiteHeader() {
           <Logo />
         </a>
 
-        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Principal">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Principal">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
@@ -71,7 +70,7 @@ export function SiteHeader() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="lg:hidden"
+                  className="md:hidden"
                   aria-label={t.nav.menu}
                 />
               }

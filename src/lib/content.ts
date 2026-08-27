@@ -36,7 +36,6 @@ export const copy = {
       about: "À propos",
       reviews: "Avis",
       contact: "Contact",
-      daisy: "À propos de Daisy",
       call: "Appeler",
       menu: "Menu",
       close: "Fermer",
@@ -186,12 +185,6 @@ export const copy = {
       blurb: "Réparation d’appareils électroniques à Sherbrooke.",
       rights: "Tous droits réservés.",
     },
-    daisy: {
-      kicker: "Hamel TV Service",
-      title: "À propos de Daisy",
-      photoAlt: "Daisy, souriante, photographiée le 23 mars 2009.",
-      back: "Retour à l’accueil",
-    },
   },
   en: {
     skip: "Skip to content",
@@ -200,7 +193,6 @@ export const copy = {
       about: "About",
       reviews: "Reviews",
       contact: "Contact",
-      daisy: "About Daisy",
       call: "Call",
       menu: "Menu",
       close: "Close",
@@ -349,12 +341,6 @@ export const copy = {
     footer: {
       blurb: "Electronics repair in Sherbrooke.",
       rights: "All rights reserved.",
-    },
-    daisy: {
-      kicker: "Hamel TV Service",
-      title: "About Daisy",
-      photoAlt: "Daisy, smiling, photographed on 23 March 2009.",
-      back: "Back to the home page",
     },
   },
 } as const
