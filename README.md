@@ -11,11 +11,13 @@ npm run dev
 
 Ouvre [http://localhost:43147](http://localhost:43147).
 
-Build de production :
+Le site en ligne : [hameltv.roymarketing.ca](https://hameltv.roymarketing.ca/).
+
+Build de production (export statique, déployé sur GitHub Pages) :
 
 ```bash
 npm run build
-npm start
+npx serve out
 ```
 
 ## Contenu

@@ -40,14 +40,6 @@ export function ContactForm() {
   }
 
   async function deliver(payload: Record<string, string>) {
-    const local = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    })
-    if (local.ok) return true
-    if (local.status === 400) return false
-
     const remote = await fetch(`https://formsubmit.co/ajax/${INBOX}`, {
       method: "POST",
       headers: {
