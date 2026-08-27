@@ -129,10 +129,10 @@ export function HomePage() {
 
           <div className="relative hidden overflow-hidden rounded-2xl ring-1 ring-paper/15 lg:block">
             <Image
-              src="/images/electronics.jpg"
-              alt={t.about.photoAlt}
+              src="/images/hero-tv.jpg"
+              alt={t.hero.photoAlt}
               width={1024}
-              height={1365}
+              height={1536}
               className="aspect-3/4 h-full w-full object-cover"
               priority
             />
@@ -174,10 +174,10 @@ export function HomePage() {
           <AnimateIn>
             <div className="overflow-hidden rounded-2xl ring-1 ring-paper/10">
               <Image
-                src="/images/electronics.jpg"
+                src="/images/about-install.jpg"
                 alt={t.about.photoAlt}
-                width={1024}
-                height={1365}
+                width={1536}
+                height={1024}
                 className="aspect-4/3 w-full object-cover object-center"
               />
             </div>

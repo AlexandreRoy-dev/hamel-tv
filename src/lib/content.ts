@@ -53,6 +53,7 @@ export const copy = {
       openNow: "Ouvert maintenant",
       closedNow: "Fermé pour le moment",
       hoursHint: "Lun–ven, 9 h à 17 h 30",
+      photoAlt: "Téléviseur sur l’établi de réparation Hamel TV.",
     },
     services: {
       eyebrow: "Ce que nous faisons",
@@ -93,7 +94,7 @@ export const copy = {
         "Chez Hamel TV Service, nous réparons vos appareils électroniques à Sherbrooke et les environs. Pour l’installation d’une télévision ou d’un système de son, vous pouvez aussi faire appel à notre équipe.",
         "Profitez du service à domicile pour faire installer ou réparer votre téléviseur et vos appareils exerciseurs. Nous installons aussi votre télé murale et vous conseillons sur l’équipement qui répondra le mieux à vos besoins.",
       ],
-      photoAlt: "Téléviseur, barre de son et carte électronique sur l’établi Hamel TV.",
+      photoAlt: "Téléviseur installé au mur dans un salon, avec barre de son.",
       facts: [
         { label: "Langues", value: "Français et anglais" },
         { label: "Stationnement", value: "Accessible" },
@@ -210,6 +211,7 @@ export const copy = {
       openNow: "Open now",
       closedNow: "Currently closed",
       hoursHint: "Mon–Fri, 9:00 a.m. to 5:30 p.m.",
+      photoAlt: "Television on the Hamel TV repair bench.",
     },
     services: {
       eyebrow: "What we do",
@@ -250,7 +252,7 @@ export const copy = {
         "Hamel TV Service repairs electronics in Sherbrooke and nearby. You can also call us to install a television or a sound system.",
         "Use our in-home service to install or repair your TV and exercise equipment. We also mount TVs on the wall and advise on the gear that actually fits your needs.",
       ],
-      photoAlt: "Television, soundbar, and circuit board on the Hamel TV workbench.",
+      photoAlt: "Wall-mounted television in a living room, with a soundbar.",
       facts: [
         { label: "Languages", value: "French and English" },
         { label: "Parking", value: "Accessible" },
