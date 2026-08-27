@@ -9,7 +9,7 @@ export const MAPS_QUERY = "2685 Rue Galt O, Sherbrooke, QC J1K 1L8"
 export const MAPS_EMBED = `https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=16&output=embed`
 export const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_QUERY)}`
 export const GOOGLE_REVIEWS_URL =
-  "https://www.google.com/maps/place/Hamel+TV+Service/@45.3874512,-71.9387521,17z/data=!4m8!3m7!1s0x4cb7b357d97fd2c3:0x7c2dbfdf4f0b960c!8m2!3d45.3874512!4d-71.9387521!9m1!1b1"
+  "https://www.google.com/maps/place/Hamel+TV+Service/@45.3874549,-71.941327,17z/data=!3m1!4b1!4m6!3m5!1s0x4cb7b357d97fd2c3:0x7c2dbfdf4f0b960c!8m2!3d45.3874512!4d-71.9387521!16s%2Fg%2F1tczk26w?entry=ttu"
 
 export const BRANDS = [
   "Samsung",

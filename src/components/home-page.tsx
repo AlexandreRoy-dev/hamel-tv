@@ -107,8 +107,8 @@ export function HomePage() {
               <a
                 href={GOOGLE_REVIEWS_URL}
                 target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md underline-offset-4 hover:text-brass hover:underline"
+                rel="noopener noreferrer"
+                className="inline-flex cursor-pointer items-center gap-1.5 rounded-md underline-offset-4 hover:text-brass hover:underline"
               >
                 <Star className="size-4 fill-brass text-brass" />
                 <strong className="text-paper">{t.hero.rating}</strong>
@@ -245,10 +245,10 @@ export function HomePage() {
           <a
             href={GOOGLE_REVIEWS_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "mt-5 h-10 px-4"
+              "mt-5 inline-flex h-10 cursor-pointer px-4 no-underline"
             )}
           >
             {t.reviews.seeAll}
