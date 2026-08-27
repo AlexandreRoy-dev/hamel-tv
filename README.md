@@ -25,7 +25,7 @@ npm start
 - Courriel : hameltv@videotron.ca
 - Horaires : lundi au vendredi, 9 h à 17 h 30
 
-Le formulaire d’estimation valide les champs et les enregistre dans les logs du serveur. Aucun service courriel n’est branché pour l’instant : branchez Resend, Formspree ou un relais SMTP avant la mise en ligne.
+Le formulaire d’estimation exige nom, courriel, téléphone et description du problème. Les envois sont transmis à **alex@roymarketing.ca**. La première fois, FormSubmit envoie un courriel de confirmation à cette adresse : cliquez le lien d’activation pour commencer à recevoir les demandes.
 
 ## Stack
 

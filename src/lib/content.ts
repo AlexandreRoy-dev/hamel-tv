@@ -176,6 +176,7 @@ export const copy = {
       errors: {
         name: "Indiquez votre nom.",
         email: "Entrez un courriel valide.",
+        phone: "Indiquez un numéro de téléphone (10 chiffres).",
         message: "Décrivez le problème en quelques mots (au moins 10 caractères).",
       },
       mapTitle: "Carte de l’atelier Hamel TV à Sherbrooke",
@@ -332,6 +333,7 @@ export const copy = {
       errors: {
         name: "Please enter your name.",
         email: "Enter a valid email address.",
+        phone: "Enter a phone number (10 digits).",
         message: "Describe the problem in a few words (at least 10 characters).",
       },
       mapTitle: "Map of the Hamel TV shop in Sherbrooke",

@@ -11,12 +11,14 @@ import { Textarea } from "@/components/ui/textarea"
 type FieldErrors = {
   name?: string
   email?: string
+  phone?: string
   message?: string
 }
 
 type Status = "idle" | "submitting" | "success" | "error"
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const INBOX = "alex@roymarketing.ca"
 
 export function ContactForm() {
   const { t, locale } = useLanguage()
@@ -28,11 +30,39 @@ export function ContactForm() {
     const next: FieldErrors = {}
     const name = String(form.get("name") ?? "").trim()
     const email = String(form.get("email") ?? "").trim()
+    const phone = String(form.get("phone") ?? "").trim()
     const message = String(form.get("message") ?? "").trim()
     if (name.length < 2) next.name = c.errors.name
     if (!emailPattern.test(email)) next.email = c.errors.email
+    if (phone.replace(/\D/g, "").length < 10) next.phone = c.errors.phone
     if (message.length < 10) next.message = c.errors.message
     return next
+  }
+
+  async function deliver(payload: Record<string, string>) {
+    const local = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
+    if (local.ok) return true
+    if (local.status === 400) return false
+
+    const remote = await fetch(`https://formsubmit.co/ajax/${INBOX}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        ...payload,
+        _subject: `Hamel TV: demande d'estimation de ${payload.name}`,
+        _replyto: payload.email,
+        _template: "table",
+        _captcha: "false",
+      }),
+    })
+    return remote.ok
   }
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -44,20 +74,17 @@ export function ContactForm() {
     if (Object.keys(nextErrors).length > 0) return
 
     setStatus("submitting")
+    const payload = {
+      name: String(data.get("name") ?? "").trim(),
+      email: String(data.get("email") ?? "").trim(),
+      phone: String(data.get("phone") ?? "").trim(),
+      service: String(data.get("service") ?? "").trim(),
+      message: String(data.get("message") ?? "").trim(),
+      locale,
+    }
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: String(data.get("name") ?? "").trim(),
-          email: String(data.get("email") ?? "").trim(),
-          phone: String(data.get("phone") ?? "").trim(),
-          service: String(data.get("service") ?? "").trim(),
-          message: String(data.get("message") ?? "").trim(),
-          locale,
-        }),
-      })
-      if (!response.ok) throw new Error("request failed")
+      const sent = await deliver(payload)
+      if (!sent) throw new Error("request failed")
       setStatus("success")
       form.reset()
     } catch {
@@ -108,11 +135,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-4" noValidate>
-      <Field
-        id="name"
-        label={c.name}
-        error={errors.name}
-      >
+      <Field id="name" label={c.name} error={errors.name}>
         <Input
           id="name"
           name="name"
@@ -133,16 +156,15 @@ export function ContactForm() {
           className="h-11 px-3"
         />
       </Field>
-      <Field
-        id="phone"
-        label={`${c.phone} `}
-        hint={c.phoneOptional}
-      >
+      <Field id="phone" label={c.phone} error={errors.phone}>
         <Input
           id="phone"
           name="phone"
           type="tel"
           autoComplete="tel"
+          inputMode="tel"
+          required
+          aria-invalid={Boolean(errors.phone)}
           className="h-11 px-3"
         />
       </Field>
