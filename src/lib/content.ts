@@ -8,6 +8,8 @@ export const ADDRESS_CITY = "Sherbrooke, QC J1K 1L8"
 export const MAPS_QUERY = "2685 Rue Galt O, Sherbrooke, QC J1K 1L8"
 export const MAPS_EMBED = `https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=16&output=embed`
 export const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_QUERY)}`
+export const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/maps/place/Hamel+TV+Service/@45.3874512,-71.9387521,17z/data=!4m8!3m7!1s0x4cb7b357d97fd2c3:0x7c2dbfdf4f0b960c!8m2!3d45.3874512!4d-71.9387521!9m1!1b1"
 
 export const BRANDS = [
   "Samsung",
@@ -46,8 +48,8 @@ export const copy = {
       ctaPrimary: "Demander une estimation",
       ctaSecondary: "Voir les services",
       callLabel: "Appelez-nous",
-      rating: "4,6 / 5",
-      ratingNote: "sur Google",
+      rating: "4,7 / 5",
+      ratingNote: "sur Google · 42 avis",
       openNow: "Ouvert maintenant",
       closedNow: "Fermé pour le moment",
       hoursHint: "Lun–ven, 9 h à 17 h 30",
@@ -106,6 +108,7 @@ export const copy = {
     reviews: {
       eyebrow: "Avis clients",
       title: "Honnête, précis, sans surcharge.",
+      seeAll: "Voir les avis Google",
       items: [
         {
           quote:
@@ -201,8 +204,8 @@ export const copy = {
       ctaPrimary: "Request an estimate",
       ctaSecondary: "See services",
       callLabel: "Call us",
-      rating: "4.6 / 5",
-      ratingNote: "on Google",
+      rating: "4.7 / 5",
+      ratingNote: "on Google · 42 reviews",
       openNow: "Open now",
       closedNow: "Currently closed",
       hoursHint: "Mon–Fri, 9:00 a.m. to 5:30 p.m.",
@@ -261,6 +264,7 @@ export const copy = {
     reviews: {
       eyebrow: "Customer reviews",
       title: "Honest, precise, no padding the bill.",
+      seeAll: "See Google reviews",
       items: [
         {
           quote:

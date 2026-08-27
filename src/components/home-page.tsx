@@ -23,6 +23,7 @@ import {
   ADDRESS_CITY,
   ADDRESS_LINE,
   BRANDS,
+  GOOGLE_REVIEWS_URL,
   MAPS_EMBED,
   MAPS_LINK,
   PHONE_DISPLAY,
@@ -103,11 +104,16 @@ export function HomePage() {
               </a>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-paper/75">
-              <span className="inline-flex items-center gap-1.5">
+              <a
+                href={GOOGLE_REVIEWS_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-md underline-offset-4 hover:text-brass hover:underline"
+              >
                 <Star className="size-4 fill-brass text-brass" />
                 <strong className="text-paper">{t.hero.rating}</strong>
                 <span>{t.hero.ratingNote}</span>
-              </span>
+              </a>
               <span className="inline-flex items-center gap-2">
                 <span
                   className={cn(
@@ -236,6 +242,17 @@ export function HomePage() {
           <h2 className="mt-3 max-w-xl font-heading text-3xl sm:text-4xl">
             {t.reviews.title}
           </h2>
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "mt-5 h-10 px-4"
+            )}
+          >
+            {t.reviews.seeAll}
+          </a>
         </AnimateIn>
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           {t.reviews.items.map((review, index) => (
