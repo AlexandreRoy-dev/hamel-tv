@@ -42,7 +42,7 @@ export const copy = {
     hero: {
       kicker: "Sherbrooke et les environs",
       title: "On répare encore ce que d’autres jettent.",
-      lede: "Téléviseurs, systèmes de son, micro-ondes et appareils exerciseurs : Hamel TV Service diagnostique, répare et installe — à l’atelier ou chez vous.",
+      lede: "Téléviseurs, systèmes de son et micro-ondes : Hamel TV Service diagnostique, répare et installe à l’atelier ou chez vous.",
       ctaPrimary: "Demander une estimation",
       ctaSecondary: "Voir les services",
       rating: "4,6 / 5",
@@ -55,7 +55,7 @@ export const copy = {
       eyebrow: "Ce que nous faisons",
       title: "Réparation, installation, service à domicile.",
       intro:
-        "Un atelier local qui prend le temps d’expliquer le diagnostic — et qui ne facture que ce qui est nécessaire.",
+        "Un atelier local qui prend le temps d’expliquer le diagnostic, et qui ne facture que ce qui est nécessaire.",
       items: [
         {
           title: "Téléviseurs",
@@ -75,7 +75,7 @@ export const copy = {
         },
         {
           title: "Appareils exerciseurs",
-          body: "Tapis roulant, elliptique et vélo stationnaire — entretien et réparation à domicile.",
+          body: "Tapis roulant, elliptique et vélo stationnaire : entretien et réparation à domicile.",
         },
         {
           title: "Service à domicile",
@@ -90,7 +90,7 @@ export const copy = {
         "Chez Hamel TV Service, nous réparons vos appareils électroniques à Sherbrooke et les environs. Pour l’installation d’une télévision ou d’un système de son, vous pouvez aussi faire appel à notre équipe.",
         "Profitez du service à domicile pour faire installer ou réparer votre téléviseur et vos appareils exerciseurs. Nous installons aussi votre télé murale et vous conseillons sur l’équipement qui répondra le mieux à vos besoins.",
       ],
-      photoAlt: "Technicien réparant le dos d’un téléviseur à l’atelier Hamel TV.",
+      photoAlt: "Téléviseur, barre de son et carte électronique sur l’établi Hamel TV.",
       facts: [
         { label: "Langues", value: "Français et anglais" },
         { label: "Stationnement", value: "Accessible" },
@@ -99,7 +99,7 @@ export const copy = {
     },
     brands: {
       eyebrow: "Marques",
-      title: "Samsung, LG, Sony — et bien d’autres.",
+      title: "Samsung, LG, Sony, et bien d’autres.",
       note: "Nous travaillons sur la plupart des téléviseurs grand public. Si votre marque n’est pas listée, appelez : on vous dira rapidement si on peut aider.",
     },
     reviews: {
@@ -113,7 +113,7 @@ export const copy = {
         },
         {
           quote:
-            "Bon diagnostic, honnête, de bonnes explications — et on m’a facturé seulement ce dont j’avais besoin, aucune surcharge.",
+            "Bon diagnostic, honnête, de bonnes explications, et on m’a facturé seulement ce dont j’avais besoin, aucune surcharge.",
           name: "Patrick L.",
         },
         {
@@ -132,7 +132,7 @@ export const copy = {
       eyebrow: "Contact",
       title: "Appelez, passez, ou écrivez-nous.",
       intro:
-        "L’atelier est au 2685, rue Galt Ouest à Sherbrooke. Pour une estimation, décrivez l’appareil et le problème — on vous répond.",
+        "L’atelier est au 2685, rue Galt Ouest à Sherbrooke. Pour une estimation, décrivez l’appareil et le problème. On vous répond.",
       hoursTitle: "Horaires",
       hours: [
         { day: "Lundi", time: "9 h – 17 h 30" },
@@ -196,7 +196,7 @@ export const copy = {
     hero: {
       kicker: "Sherbrooke and nearby",
       title: "We still repair what others throw away.",
-      lede: "TVs, sound systems, microwaves, and home gym equipment: Hamel TV Service diagnoses, repairs, and installs — in the shop or at your home.",
+      lede: "TVs, sound systems, and microwaves: Hamel TV Service diagnoses, repairs, and installs in the shop or at your home.",
       ctaPrimary: "Request an estimate",
       ctaSecondary: "See services",
       rating: "4.6 / 5",
@@ -209,7 +209,7 @@ export const copy = {
       eyebrow: "What we do",
       title: "Repair, installation, house calls.",
       intro:
-        "A local shop that takes time to explain the diagnosis — and only charges for what you actually need.",
+        "A local shop that takes time to explain the diagnosis, and only charges for what you actually need.",
       items: [
         {
           title: "Televisions",
@@ -229,7 +229,7 @@ export const copy = {
         },
         {
           title: "Exercise equipment",
-          body: "Treadmills, ellipticals, and stationary bikes — service and repair at your home.",
+          body: "Treadmills, ellipticals, and stationary bikes: service and repair at your home.",
         },
         {
           title: "In-home service",
@@ -244,7 +244,7 @@ export const copy = {
         "Hamel TV Service repairs electronics in Sherbrooke and nearby. You can also call us to install a television or a sound system.",
         "Use our in-home service to install or repair your TV and exercise equipment. We also mount TVs on the wall and advise on the gear that actually fits your needs.",
       ],
-      photoAlt: "Technician repairing the back of a television at the Hamel TV workshop.",
+      photoAlt: "Television, soundbar, and circuit board on the Hamel TV workbench.",
       facts: [
         { label: "Languages", value: "French and English" },
         { label: "Parking", value: "Accessible" },
@@ -253,7 +253,7 @@ export const copy = {
     },
     brands: {
       eyebrow: "Brands",
-      title: "Samsung, LG, Sony — and plenty more.",
+      title: "Samsung, LG, Sony, and plenty more.",
       note: "We work on most consumer TVs. If your brand isn’t listed, call: we’ll tell you quickly whether we can help.",
     },
     reviews: {
@@ -267,7 +267,7 @@ export const copy = {
         },
         {
           quote:
-            "Good diagnosis, honest, clear explanations — and I was only charged for what I needed, no extras.",
+            "Good diagnosis, honest, clear explanations, and I was only charged for what I needed, no extras.",
           name: "Patrick L.",
         },
         {
@@ -286,7 +286,7 @@ export const copy = {
       eyebrow: "Contact",
       title: "Call, drop in, or write to us.",
       intro:
-        "The shop is at 2685 Galt Street West in Sherbrooke. For an estimate, describe the device and the problem — we’ll get back to you.",
+        "The shop is at 2685 Galt Street West in Sherbrooke. For an estimate, describe the device and the problem. We’ll get back to you.",
       hoursTitle: "Hours",
       hours: [
         { day: "Monday", time: "9:00 a.m. – 5:30 p.m." },

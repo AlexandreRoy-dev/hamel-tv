@@ -17,7 +17,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   title: "Hamel TV Service | Réparation d’appareils électroniques à Sherbrooke",
   description:
-    "Réparation de téléviseurs, micro-ondes et appareils exerciseurs à Sherbrooke. Installation TV murale, systèmes de son et service à domicile. 2685, rue Galt Ouest.",
+    "Réparation de téléviseurs, systèmes de son et micro-ondes à Sherbrooke. Installation TV murale et service à domicile. 2685, rue Galt Ouest.",
   openGraph: {
     title: "Hamel TV Service",
     description:

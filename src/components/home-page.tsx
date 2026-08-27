@@ -45,7 +45,7 @@ export function HomePage() {
       >
         <div className="pointer-events-none absolute inset-0">
           <Image
-            src="/images/atelier.jpg"
+            src="/images/electronics.jpg"
             alt=""
             fill
             priority
@@ -106,11 +106,11 @@ export function HomePage() {
 
           <div className="relative hidden overflow-hidden rounded-2xl ring-1 ring-paper/15 lg:block">
             <Image
-              src="/images/atelier.jpg"
+              src="/images/electronics.jpg"
               alt={t.about.photoAlt}
-              width={1000}
-              height={720}
-              className="aspect-4/5 h-full w-full object-cover"
+              width={1024}
+              height={1365}
+              className="aspect-3/4 h-full w-full object-cover"
               priority
             />
           </div>
@@ -151,11 +151,11 @@ export function HomePage() {
           <AnimateIn>
             <div className="overflow-hidden rounded-2xl ring-1 ring-paper/10">
               <Image
-                src="/images/atelier.jpg"
+                src="/images/electronics.jpg"
                 alt={t.about.photoAlt}
-                width={1000}
-                height={720}
-                className="aspect-5/4 w-full object-cover"
+                width={1024}
+                height={1365}
+                className="aspect-4/3 w-full object-cover object-center"
               />
             </div>
           </AnimateIn>
