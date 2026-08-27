@@ -16,31 +16,35 @@ import {
 import { PHONE_DISPLAY, PHONE_TEL, type Locale } from "@/lib/content"
 import { cn } from "@/lib/utils"
 
-const NAV_HREFS = ["#services", "#a-propos", "#avis", "#contact"] as const
+const NAV_LINKS = [
+  { href: "/#services", key: "services" },
+  { href: "/#a-propos", key: "about" },
+  { href: "/a-propos-de-daisy/", key: "daisy" },
+  { href: "/#avis", key: "reviews" },
+  { href: "/#contact", key: "contact" },
+] as const
 
 export function SiteHeader() {
   const { t, locale, setLocale } = useLanguage()
   const [open, setOpen] = useState(false)
-  const links = [
-    { href: NAV_HREFS[0], label: t.nav.services },
-    { href: NAV_HREFS[1], label: t.nav.about },
-    { href: NAV_HREFS[2], label: t.nav.reviews },
-    { href: NAV_HREFS[3], label: t.nav.contact },
-  ]
+  const links = NAV_LINKS.map((link) => ({
+    href: link.href,
+    label: t.nav[link.key],
+  }))
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-[4.25rem] w-full max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#accueil" className="rounded-md focus-visible:ring-2 focus-visible:ring-ring">
+        <a href="/" className="rounded-md focus-visible:ring-2 focus-visible:ring-ring">
           <Logo />
         </a>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Principal">
+        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Principal">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
@@ -67,7 +71,7 @@ export function SiteHeader() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="md:hidden"
+                  className="lg:hidden"
                   aria-label={t.nav.menu}
                 />
               }

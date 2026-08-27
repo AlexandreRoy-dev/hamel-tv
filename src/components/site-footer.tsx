@@ -28,6 +28,9 @@ export function SiteFooter() {
           </a>
         </div>
         <div className="text-sm text-paper/60 md:text-right">
+          <a className="mb-3 block text-paper/80 hover:text-brass" href="/a-propos-de-daisy/">
+            {t.nav.daisy}
+          </a>
           <p>
             © {year} Hamel TV Service. {t.footer.rights}
           </p>

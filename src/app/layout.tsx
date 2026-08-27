@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
 import { Geist, Newsreader } from "next/font/google"
 
+import { LanguageProvider } from "@/components/language-provider"
+import { SiteShell } from "@/components/site-shell"
+
 import "./globals.css"
 
 const geistSans = Geist({
@@ -34,7 +37,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${newsreader.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
-        {children}
+        <LanguageProvider>
+          <SiteShell>{children}</SiteShell>
+        </LanguageProvider>
       </body>
     </html>
   )
