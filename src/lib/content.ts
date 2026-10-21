@@ -1,15 +1,36 @@
 export type Locale = "fr" | "en"
 
+export const SITE_URL = "https://hameltv.roymarketing.ca"
+
 export const PHONE_DISPLAY = "819 346-2909"
 export const PHONE_TEL = "+18193462909"
 export const EMAIL = "hameltv@videotron.ca"
 export const ADDRESS_LINE = "2685, rue Galt Ouest"
-export const ADDRESS_CITY = "Sherbrooke, QC J1K 1L8"
+export const ADDRESS_LOCALITY = "Sherbrooke"
+export const ADDRESS_REGION = "QC"
+export const ADDRESS_POSTAL_CODE = "J1K 1L8"
+export const ADDRESS_COUNTRY = "CA"
+export const ADDRESS_CITY = `${ADDRESS_LOCALITY}, ${ADDRESS_REGION} ${ADDRESS_POSTAL_CODE}`
 export const MAPS_QUERY = "2685 Rue Galt O, Sherbrooke, QC J1K 1L8"
 export const MAPS_EMBED = `https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=16&output=embed`
 export const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_QUERY)}`
 export const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/place/Hamel+TV+Service/@45.3874549,-71.941327,17z/data=!3m1!4b1!4m6!3m5!1s0x4cb7b357d97fd2c3:0x7c2dbfdf4f0b960c!8m2!3d45.3874512!4d-71.9387521!16s%2Fg%2F1tczk26w?entry=ttu"
+
+/** Place pin from GOOGLE_REVIEWS_URL (the 3d and 4d parameters). */
+export const PLACE_LATITUDE = 45.3874512
+export const PLACE_LONGITUDE = -71.9387521
+
+export const IMAGE_BACKGROUND = "/images/electronics.webp"
+export const IMAGE_HERO = "/images/hero-tv.webp"
+export const IMAGE_ABOUT = "/images/about-install.webp"
+
+export const SEO_TITLE =
+  "Hamel TV Service | Réparation d’appareils électroniques à Sherbrooke"
+export const SEO_DESCRIPTION =
+  "Réparation de téléviseurs, systèmes de son et micro-ondes à Sherbrooke. Installation TV murale et service à domicile. 2685, rue Galt Ouest."
+export const SEO_SHARE_DESCRIPTION =
+  "Réparation et installation d’appareils électroniques à Sherbrooke et les environs."
 
 export const BRANDS = [
   "Samsung",
