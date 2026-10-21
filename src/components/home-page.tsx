@@ -24,6 +24,9 @@ import {
   ADDRESS_LINE,
   BRANDS,
   GOOGLE_REVIEWS_URL,
+  IMAGE_ABOUT,
+  IMAGE_BACKGROUND,
+  IMAGE_HERO,
   MAPS_EMBED,
   MAPS_LINK,
   PHONE_DISPLAY,
@@ -46,7 +49,7 @@ export function HomePage() {
       >
         <div className="pointer-events-none absolute inset-0">
           <Image
-            src="/images/electronics.jpg"
+            src={IMAGE_BACKGROUND}
             alt=""
             fill
             priority
@@ -113,7 +116,7 @@ export function HomePage() {
 
           <div className="relative hidden overflow-hidden rounded-2xl ring-1 ring-paper/15 lg:block">
             <Image
-              src="/images/hero-tv.jpg"
+              src={IMAGE_HERO}
               alt={t.hero.photoAlt}
               width={1024}
               height={1536}
@@ -158,7 +161,7 @@ export function HomePage() {
           <AnimateIn>
             <div className="overflow-hidden rounded-2xl ring-1 ring-paper/10">
               <Image
-                src="/images/about-install.jpg"
+                src={IMAGE_ABOUT}
                 alt={t.about.photoAlt}
                 width={1536}
                 height={1024}

@@ -3,6 +3,15 @@ import { Geist, Newsreader } from "next/font/google"
 
 import { LanguageProvider } from "@/components/language-provider"
 import { SiteShell } from "@/components/site-shell"
+import {
+  copy,
+  IMAGE_ABOUT,
+  SEO_DESCRIPTION,
+  SEO_SHARE_DESCRIPTION,
+  SEO_TITLE,
+  SITE_URL,
+} from "@/lib/content"
+import { localBusinessJsonLd } from "@/lib/structured-data"
 
 import "./globals.css"
 
@@ -17,16 +26,40 @@ const newsreader = Newsreader({
   style: ["normal", "italic"],
 })
 
+const pageUrl = `${SITE_URL}/`
+
 export const metadata: Metadata = {
-  title: "Hamel TV Service | Réparation d’appareils électroniques à Sherbrooke",
-  description:
-    "Réparation de téléviseurs, systèmes de son et micro-ondes à Sherbrooke. Installation TV murale et service à domicile. 2685, rue Galt Ouest.",
+  metadataBase: new URL(SITE_URL),
+  title: SEO_TITLE,
+  description: SEO_DESCRIPTION,
+  alternates: {
+    canonical: pageUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "Hamel TV Service",
-    description:
-      "Réparation et installation d’appareils électroniques à Sherbrooke et les environs.",
+    title: SEO_TITLE,
+    description: SEO_SHARE_DESCRIPTION,
     locale: "fr_CA",
     type: "website",
+    url: pageUrl,
+    siteName: "Hamel TV Service",
+    images: [
+      {
+        url: IMAGE_ABOUT,
+        width: 1536,
+        height: 1024,
+        alt: copy.fr.about.photoAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: SEO_SHARE_DESCRIPTION,
+    images: [IMAGE_ABOUT],
   },
 }
 
@@ -37,6 +70,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${newsreader.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd()).replace(/</g, "\\u003c"),
+          }}
+        />
         <LanguageProvider>
           <SiteShell>{children}</SiteShell>
         </LanguageProvider>
